@@ -88,7 +88,7 @@ articleView.create = () => {
   let article;
   $('#articles').empty();
 
-  article = new Article({ /*eslint-disable*/
+  article = new Article({/*eslint-disable*/
     title: $('#article-title').val(),
     author: $('#article-author').val(),
     authorUrl: $('#article-author-url').val(),

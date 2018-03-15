@@ -79,18 +79,18 @@ app.post('/articles/:author', (request, response) => {
     client.query(
       `INSERT INTO articles(author_id, title, category, "publishedOn", body) 
         VALUES($1, $2, $3, $4, $5);`,
-        [ 
-          author_id,
-          request.body.title,
-          request.body.category,
-          request.body.publishedOn,
-          request.body.body
-        ])
-        .then(() => {
-          response.send('insert complete');
-        }).catch(err => {
-          console.error(err);
-        });
+      [
+        author_id,
+        request.body.title,
+        request.body.category,
+        request.body.publishedOn,
+        request.body.body
+      ])
+      .then(() => {
+        response.send('insert complete');
+      }).catch(err => {
+        console.error(err);
+      });
   }
 });
 
